@@ -1,0 +1,8 @@
+---
+
+- hosts: all-hosts
+ 
+  tasks:
+   - name: checking my file exists or not
+     import_role:
+       name: test
