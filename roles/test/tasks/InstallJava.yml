@@ -1,8 +1,7 @@
     
-<<<<<<< Updated upstream
     tasks:
     
-  - name: Create a folder
+  - name: Create a folder for the files
     command: mkdir /tmp/java
     
   - name: Change permissions 
@@ -13,8 +12,6 @@
   - name: Change directory 
     command : cd /tmp/java  
     
-=======
->>>>>>> Stashed changes
   - name: Download Java
     command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{java_archive}}"
 
