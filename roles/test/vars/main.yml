@@ -1,6 +1,6 @@
 ---
 file_name: test
-download_url: http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz
+download_url: https://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f270a4347a95050320eef3fb7/jdk-11.0.1_linux-x64_bin.tar.gz 
 download_folder: /tmp
-java_name: "{{download_folder}}/jdk1.8.0_05"
-java_archive: "{{download_folder}}/jdk-8u5-linux-x64.tar.gz"
+java_name: "{{download_folder}}/jdk11.0.1"
+java_archive: "{{download_folder}}/jdk-11.0.1_linux-x64_bin.tar.gz"
