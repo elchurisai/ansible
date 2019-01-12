@@ -1,0 +1,6 @@
+---
+file_name: test
+download_url: https://www-eu.apache.org/dist/maven/maven-3/3.6.0/source/apache-maven-3.6.0-src.zip
+download_folder: /tmp/maven
+java_name: "{{ download_url }}/apache-maven-3.6.0-src.zip"
+java_archive: "{{download_folder}}/maven"

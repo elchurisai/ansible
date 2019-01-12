@@ -1,0 +1,18 @@
+
+  - name: Create a folder for the files
+    command:  mkdir /tmp/maven
+    
+  - name: Change permissions 
+    file: 
+     path: /tmp/maven
+     owner: ansadmin
+     mode: 0774
+    
+  - name: Change directory 
+    command : sudo cd /tmp/maven  
+    
+  - name: get JDK tarball (as RPM file)
+    get_url:
+      url:      https://www-eu.apache.org/dist/maven/maven-3/3.6.0/source/apache-maven-3.6.0-src.zip
+    #  headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+      dest: /tmp/maven

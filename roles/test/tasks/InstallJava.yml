@@ -1,9 +1,4 @@
-    
-<<<<<<< Updated upstream
-    tasks:
-=======
->>>>>>> Stashed changes
-    
+  
   - name: Create a folder for the files
     command: mkdir /tmp/java
     ignore_errors: yes

@@ -1,0 +1,33 @@
+
+  - name: Create a folder for the files
+    command: mkdir /tmp/java
+    
+  - name: Change permissions 
+    file: 
+     path: /tmp/java
+     owner: ansadmin
+     mode: 0774
+    
+  - name: Change directory 
+    command : cd /tmp/java  
+    
+  - name: get JDK tarball (as RPM file)
+    get_url:
+  # RPM url    url: https://javadl.oracle.com/webapps/download/AutoDL?BundleId=235716_2787e4a523244c269598db4e85c51e0c      
+    #  headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+       url: "{{ download_url }}"
+       dest: "{{ download_folder }}"
+
+  - debug:
+     msg: "values of  {{ download_url }} and download folder  {{ download_folder }} and java name {{ java_name }} and java archieve {{ java_archive }} " 
+
+  - name: Unpack archive
+    command: "tar -zxvf {{ java_archive }} -C {{ download_folder }} creates={{java_name}}" 
+#    action: shell tar -xzvf {{java_archive}} -C {{download_folder}}
+
+  - name: Fix ownership
+    file: state=directory path={{java_name}} owner=ansadmin group=ansadmin recurse=yes
+
+  - name: Make Java available for system by updating alternatives
+    command: sudo alternatives --install /usr/bin/java java /tmp/java/jre1.8.0_191/bin/java 2000
+#    command: alternatives --list

@@ -1,6 +1,7 @@
 ---
 file_name: test
-download_url: https://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f270a4347a95050320eef3fb7/jdk-11.0.1_linux-x64_bin.tar.gz 
-download_folder: /tmp
-java_name: "{{download_folder}}/java"
-java_archive: "{{download_folder}}/jdk-11.0.1_linux-x64_bin.tar.gz"
+download_url: https://javadl.oracle.com/webapps/download/AutoDL?BundleId=235717_2787e4a523244c269598db4e85c51e0c
+#download_url:  http://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f270a4347a95050320eef3fb7
+download_folder: /tmp/java
+java_name: "{{ download_folder }}//jre1.8.0_191"
+java_archive: "{{ download_folder }}/jre-8u191-linux-x64.tar.gz"
